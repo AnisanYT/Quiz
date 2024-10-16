@@ -1,15 +1,14 @@
-
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAKiu5kbtEp-Lmmf4dIP7iwETYBQgsrC2g",
-  authDomain: "historiaculturalcr.firebaseapp.com",
-  projectId: "historiaculturalcr",
-  storageBucket: "historiaculturalcr.appspot.com",
-  messagingSenderId: "682030223411",
-  appId: "1:682030223411:web:7ae16598f9fa15adda1346"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
