@@ -5,16 +5,17 @@ const isAuth = () => {
     const token = localStorage.getItem('token') 
     return !!token
 }
+
 const ProfilePage = () => {
 
     return(
-        <>
+        <div>
             {
                 isAuth() !== true 
                 ? <IfNotAccount/>
                 : <ProfileInfo/>
             }
-        </>
+        </div>
     ) 
 }
 
